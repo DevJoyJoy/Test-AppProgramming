@@ -7,8 +7,8 @@ R: Os props seriam os componentes, como botões, que terão estilo e funções q
 e funcional, que facilita a leitura do código e a alteração desse componente no futuro.
 
 3)O que o TailwindCSS oferece de vantagem em relação ao CSS tradicional?
-R: O TailwindCSS facilita a estilização da nossa página por permitir uma sintaxe mais curta, que vai diretamente no retorno do HTML, assim podemos polpar arquivos e linhas na hora 
-da estilização.
+R: O TailwindCSS facilita a estilização da nossa página por permitir uma sintaxe mais curta, que vai diretamente no retorno do HTML, assim podemos polpar arquivos e linhas
+de estilização.
 
 4)Identifique o problema no código abaixo e marque a alternativa que exibe o
 problema do código.
@@ -37,7 +37,7 @@ export default function App() {
 }
 ---------------------------------------------------------------
 
-A) O React não permite atualizar dois estados (mensagem e contador)
+Resposta correta: A) O React não permite atualizar dois estados (mensagem e contador)
 dentro do mesmo useEffect.
 B) A renderização condicional ({mensagem &&...}) impede o useEffect de
 atualizar o estado.
