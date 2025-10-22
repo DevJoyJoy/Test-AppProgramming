@@ -28,14 +28,14 @@ export function Home(){
                 </div>
                 <br />
 
-                <h1 className='m-5'>Selecione o perfil: </h1>
-                <div className='flex justify-between align-middle'>
+                <div className='flex justify-center align-middle'>
                     <ul>
-                            <div className='bg-purple-300 flex w-450 h-auto flex-row rounded-2xl p-5'>
-                                <br />
-                                <br />
+                        <h1 className='m-5'>Clique no perfil desejado: </h1>
+                        <li className='bg-purple-300 flex w-450 h-auto flex-row rounded-2xl p-5 justify-center'>
+                            <div className='flex flex-col justify-between'>
                                     {users.map((user) => (
-                                        <li key={user.id} onClick={() => openUserPf(user)} style={{cursor:"pointer"}}>
+                                        <div className='bg-purple-200 flex w-200 h-auto flex-row rounded-2xl p-5 justify-between m-3 shadow-2xl' key={user.id} onClick={() => openUserPf(user)} style={{cursor:"pointer"}}>
+                                            <div className='bg-green-400 w-5 h-5 rounded-full'></div>
                                             <br />
                                             ID: {user.id}
                                             <br />
@@ -43,10 +43,11 @@ export function Home(){
                                             <br />
                                             Apelido: {user.apelido}
                                             <br />
-                                            Status: {user.status}
-                                        </li>
+                                            <img className="w-50 h-auto ml-20" src={user.imagem} alt="" />
+                                        </div>
                                     ))}
                             </div>
+                        </li>
                     </ul>
                 </div>
             </div>

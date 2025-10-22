@@ -1,16 +1,18 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export function UserData(){
     const location = useLocation();
     const {user} = location.state || {};
+    const navigate = useNavigate();
 
     return(
         <>
         <div className='bg-purple-200 min-h-screen flex flex-col'>
             <div className='bg-purple-950 w-full h-30 flex justify-between align-middle'>
-                <div className='text-white font-bold text-5xl'>Div/as Bosch</div>
+                <div className='text-white font-bold text-5xl m-8'>Div/as Bosch</div>
+                <button className="bg-purple-500 text-white w-30 h-15 rounded-lg transition m-7.5" onClick={() => navigate('/')}>Ir para Home</button>
             </div>
             <br />
             
