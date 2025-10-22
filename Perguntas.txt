@@ -1,0 +1,47 @@
+1)O que acontece se você não passar o segundo parâmetro ([]) no useEffect?
+R: Sem o segundo parâmetro, o useEffect não vai saber o que você deseja mostrar quando algo for alterado.
+
+2)Explique o conceito de props no React. Por que é importante que
+componentes recebam dados através das props?
+R: Os props seriam os componentes, como botões, que terão estilo e funções que se repetirão no código mais de uma vez. Com as props, podemos ter um código mais limpo
+e funcional, que facilita a leitura do código e a alteração desse componente no futuro.
+
+3)O que o TailwindCSS oferece de vantagem em relação ao CSS tradicional?
+R: O TailwindCSS facilita a estilização da nossa página por permitir uma sintaxe mais curta, que vai diretamente no retorno do HTML, assim podemos polpar arquivos e linhas na hora 
+da estilização.
+
+4)Identifique o problema no código abaixo e marque a alternativa que exibe o
+problema do código.
+R: Letra A
+-----------------------------------------------------------------
+import { useState, useEffect } from "react"
+
+export default function App() {
+  const [contador, setContador] = useState(0)
+  const [mensagem, setMensagem] = useState("")
+ 
+    useEffect(() => {
+        if (contador === 0) {
+            setMensagem("Iniciando contagem...")
+            setContador(contador + 1)
+    }
+  }, [contador])
+    
+    return (
+
+    <div className="text-center mt-10">
+      <h1 className="text-2xl font-bold mb-4">Contador: {contador}></h1>
+      {mensagem && <p className="text-blue-500">{mensagem}</p>}
+    </div>
+  )
+}
+---------------------------------------------------------------
+
+A) O React não permite atualizar dois estados (mensagem e contador)
+dentro do mesmo useEffect.
+B) A renderização condicional ({mensagem &&...}) impede o useEffect de
+atualizar o estado.
+C) O useEffect depende de contador e, ao atualizá-lo dentro dele, causa
+um loop de renderizações.
+D) O useState deveria ser inicializado com null em vez de 0 para evitar o
+erro.
